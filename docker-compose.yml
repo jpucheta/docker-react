@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web: #le pone web tan solo por ponerle, es un tag nada mas.. pero ahi le especifica que va a hacer el build.
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes: 
+      - /app/node_modules
+      - .:/app
